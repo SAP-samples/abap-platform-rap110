@@ -119,6 +119,12 @@ _BO: Business Object_
 _EML: Entity Manipulation Language_    
 💡 Exercises with _Boosters_ offer an accelerated way of doing them. 
 
+### Optional Exercises: 
+The above exercises (1-12) focus on the development capabilities available in the ABAP Development Tools for Eclipse (ADT). The _SAP Fiori elements App Preview_ integrated in ADT is used to preview the resulting app. To create, deploy, and run the actual SAP Fiori elements-based _Travel_ app using the SAP Business Application Studio, follow the instructions in the following tutorial from the _SAP Developer Center_:
+
+[🛠 Create an SAP Fiori elements App and Deploy it to SAP BTP, ABAP Environment with SAP Business Application Studio | SAP Tutorials](https://developers.sap.com/tutorials/abap-environment-deploy-fiori-elements-ui.html)
+
+
 ## 📹Recording 
 [^Top of page](#)
 
