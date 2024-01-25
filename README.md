@@ -13,6 +13,7 @@ This repository contains the material for the hands-on session **RAP110 - Buildi
 - [Overview](#overview)
 - [Exercises](#-exercises)
 - [Recording](#recording)
+- [Solution Package](#solution-package)
 - [How to obtain support](#how-to-obtain-support) 
 - [Further Information](#further-information)
 
@@ -121,7 +122,17 @@ _EML: Entity Manipulation Language_
 ## 📹Recording 
 [^Top of page](#)
 
-No recording available. 
+For a compact overview of the exercises, watch the session replay from SAP TechEd 2023 (_gated content_):  
+
+⏺ [Delve into ABAP Cloud on SAP BTP, ABAP Environment – AD181v](https://go3.events.sap.com/sapteched/virtual/2023/reg/flow/sap/sapteched23/catalog/page/catalog/session/1693019545062001fMQZ)
+
+## 📤Solution Package
+
+You can import the solution package **`ZRAP110_SOL`** into your system.
+
+1. If not yet done, [install the abapGit plug-in into your ABAP Development Tools (ADT) for Eclipse](https://developers.sap.com/tutorials/abap-install-abapgit-plugin.html)
+2. Use the abapGit Plug-in in ADT to import / pull the implementation into your system
+    📤 Git repository: https://github.tools.sap/D040081/rap110_sol
 
 ## 🎧How to obtain support
 [^Top of page](#)
