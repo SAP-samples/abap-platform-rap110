@@ -1,0 +1,40 @@
+projection;
+strict ( 2 );
+use draft;
+use side effects;
+define behavior for ZRAP110_C_TRAVELTP_SOL alias Travel
+use etag
+
+{
+  use create;
+  use update;
+  use delete;
+
+  use action Edit;
+  use action Activate;
+  use action Discard;
+  use action Resume;
+  use action Prepare;
+  use action acceptTravel;
+  use action rejectTravel;
+  use action createTravel;
+
+  use action checkDates;
+
+  use association _Booking { create; with draft; }
+}
+
+define behavior for ZRAP110_C_BOOKINGTP_SOL alias Booking
+use etag
+
+{
+  use update;
+  use delete;
+  side effects
+  { field BookingDate affects field DaysToFlightIndicator, field InitialDaysToFlight, field RemainingDaysToFlight;
+    field FlightDate affects field DaysToFlightIndicator, field InitialDaysToFlight, field RemainingDaysToFlight;
+    field ConnectionID affects field DaysToFlightIndicator, field InitialDaysToFlight, field RemainingDaysToFlight;
+    field CarrierID affects field DaysToFlightIndicator, field InitialDaysToFlight, field RemainingDaysToFlight; }
+
+  use association _Travel { with draft; }
+}

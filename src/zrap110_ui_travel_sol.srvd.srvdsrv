@@ -1,0 +1,14 @@
+@EndUserText.label: 'Service for managing travel entities'
+@ObjectModel.leadingEntity.name: 'ZRAP110_C_TRAVELTP_SOL'
+define service ZRAP110_UI_TRAVEL_SOL {
+  expose ZRAP110_C_TRAVELTP_SOL   as Travel;
+  expose ZRAP110_C_BOOKINGTP_SOL  as Booking;
+  expose /DMO/I_Customer          as Customer;
+  expose /DMO/I_Carrier           as Carrier;
+  expose /DMO/I_Connection        as Connection;
+  expose /DMO/I_Flight            as Date;
+  expose /DMO/I_Booking_Status_VH as BookingStatus;
+  expose I_Currency               as Currency;
+  expose /DMO/I_Customer_StdVH    as CustomerVh;
+  expose I_CurrencyStdVH          as Currencyvh2;
+}
