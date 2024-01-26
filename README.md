@@ -1,3 +1,5 @@
+[Home - Workshops about the ABAP RESTful Application Programming Model (RAP)](https://github.com/SAP-samples/abap-platform-rap-workshops/blob/main/README.md)
+
 [![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/abap-platform-rap110)](https://api.reuse.software/info/github.com/SAP-samples/abap-platform-rap110)
 
 # RAP110 - Build transactional SAP Fiori elements-based Apps with the ABAP RESTful Application Programming Model (RAP)
