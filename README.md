@@ -128,7 +128,7 @@ The main exercises (1-12) focus on the development capabilities available in the
 
 [🛠 Create an SAP Fiori elements App and Deploy it to SAP BTP, ABAP Environment with SAP Business Application Studio | SAP Tutorials](https://developers.sap.com/tutorials/abap-environment-deploy-fiori-elements-ui.html)
 
-> **Info**: This step should can be performed at after any of the main exercises, but preferably at least after _Exercise 5_.
+> **Info**: This exercise can be performed after any of the main exercises above, but should be performed preferably after at least _Exercise 5_ .
 
 ## 📹Recording 
 [^Top of page](#)
