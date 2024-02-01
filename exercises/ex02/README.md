@@ -381,7 +381,7 @@ In this exercise, you will enhance the CDS data model of the base BO and the BO 
         IF it_requested_calc_elements IS INITIAL.
           EXIT.
         ENDIF.
-    
+        
         LOOP AT it_requested_calc_elements ASSIGNING FIELD-SYMBOL(<fs_req_calc_elements>).    
           CASE <fs_req_calc_elements>.
               "virtual elements from BOOKING entity
@@ -390,7 +390,9 @@ In this exercise, you will enhance the CDS data model of the base BO and the BO 
               DATA lt_book_original_data TYPE STANDARD TABLE OF ZRAP110_C_BookingTP_### WITH DEFAULT KEY.
               lt_book_original_data = CORRESPONDING #( it_original_data ).
               LOOP AT lt_book_original_data ASSIGNING FIELD-SYMBOL(<fs_book_original_data>).
+    
     *            <fs_book_original_data> = zrap110_calc_book_elem_###=>calculate_days_to_flight( <fs_book_original_data> ).
+    
               ENDLOOP.
               ct_calculated_data = CORRESPONDING #( lt_book_original_data ).
           ENDCASE.
