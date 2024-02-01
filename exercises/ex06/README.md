@@ -292,6 +292,9 @@ A validation is implicitly invoked by the business object’s framework if the t
      ENDMETHOD.    
     ```
 
+    > Note: the local constant `booking_status` was defined in the local handler class `lhc_booking` in  
+    > _[Exercise 3.8.2: Adjust the Behavior Implementation Class of the Booking BO entity](../ex03/README.md#exercise-38-adjust-the-behavior-implementation-classes)_.
+
   2. Save ![save icon](../images/adt_save.png) (**Ctrl+S**) and activate ![activate icon](../images/adt_activate.png) (**Ctrl+F3**) the changes. 
 
 </details>
