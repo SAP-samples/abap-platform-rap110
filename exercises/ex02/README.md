@@ -86,6 +86,12 @@ In this exercise, you will enhance the CDS data model of the base BO and the BO 
      </details>     
       
  3. Save ![save icon](../images/adt_save.png) (**Ctrl+S**) and activate ![activate icon](../images/adt_activate.png) (**Ctrl+F3**) the changes. Close the data definition.
+  
+ 4. You can check the result of this changes in the _Travel_ app preview by refreshing the it in the browser (_F5_) or starting the again the Fiori elements App Preview in ADT.
+  
+      You will now have the possibility to upload a file on the _travel_ details page, aka _Object Page_.
+  
+      <img src="images/ex201a.png" alt="Base Travel BO view" width="50%">   
 
 </details>
 
