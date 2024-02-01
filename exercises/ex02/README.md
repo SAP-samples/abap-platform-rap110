@@ -179,17 +179,14 @@ In this exercise, you will enhance the CDS data model of the base BO and the BO 
           CASE <fs_req_calc_elements>.
               "virtual elements from TRAVEL entity
             WHEN 'OVERALLSTATUSINDICATOR'.
-    
               DATA lt_trav_original_data TYPE STANDARD TABLE OF ZRAP110_C_TravelTP_### WITH DEFAULT KEY.
               lt_trav_original_data = CORRESPONDING #( it_original_data ).
               LOOP AT lt_trav_original_data ASSIGNING FIELD-SYMBOL(<fs_trav_original_data>).
     
     *            <fs_trav_original_data> = zrap110_calc_trav_elem_###=>calculate_trav_status_ind( <fs_trav_original_data> ).
     
-              ENDLOOP.
-    
-              ct_calculated_data = CORRESPONDING #( lt_trav_original_data ).
-    
+              ENDLOOP.    
+              ct_calculated_data = CORRESPONDING #( lt_trav_original_data ).  
           ENDCASE.
         ENDLOOP.
       ENDMETHOD.
@@ -385,13 +382,11 @@ In this exercise, you will enhance the CDS data model of the base BO and the BO 
           EXIT.
         ENDIF.
     
-        LOOP AT it_requested_calc_elements ASSIGNING FIELD-SYMBOL(<fs_req_calc_elements>).
-    
+        LOOP AT it_requested_calc_elements ASSIGNING FIELD-SYMBOL(<fs_req_calc_elements>).    
           CASE <fs_req_calc_elements>.
               "virtual elements from BOOKING entity
             WHEN 'INITIALDAYSTOFLIGHT'   OR 'REMAININGDAYSTOFLIGHT'
-              OR 'DAYSTOFLIGHTINDICATOR' OR 'BOOKINGSTATUSINDICATOR'.
-    
+              OR 'DAYSTOFLIGHTINDICATOR' OR 'BOOKINGSTATUSINDICATOR'.    
               DATA lt_book_original_data TYPE STANDARD TABLE OF ZRAP110_C_BookingTP_### WITH DEFAULT KEY.
               lt_book_original_data = CORRESPONDING #( it_original_data ).
               LOOP AT lt_book_original_data ASSIGNING FIELD-SYMBOL(<fs_book_original_data>).
@@ -401,8 +396,7 @@ In this exercise, you will enhance the CDS data model of the base BO and the BO 
           ENDCASE.
         ENDLOOP.
       ENDMETHOD.
-    
-    
+        
       METHOD if_sadl_exit_calc_element_read~get_calculation_info.
         IF iv_entity EQ 'ZRAP110_C_BOOKINGTP_###'. "Booking BO node
           LOOP AT it_requested_calc_elements ASSIGNING FIELD-SYMBOL(<fs_booking_calc_element>).
@@ -418,8 +412,7 @@ In this exercise, you will enhance the CDS data model of the base BO and the BO 
                 COLLECT `BOOKINGSTATUS` INTO et_requested_orig_elements.
             ENDCASE.
           ENDLOOP.
-        ENDIF.
-    
+        ENDIF.    
       ENDMETHOD.
     
     ENDCLASS.
