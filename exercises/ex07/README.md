@@ -88,7 +88,7 @@ In this exercise, you will implement the different actions defined for the _Trav
 >   > `  action acceptTravel result [1] $self; `  
 >   > `  action rejectTravel result [1] $self; `  
 > 
-> The definition, implementation and exposuse of instance actions is covered and explained in [RAP100](../../../rap100#exercises). Therefore, simply copy the business logic provided as code snippet below in your _travel_ behavior pool ![ABAP class](../images/adt_class.png)`ZRAP110_BP_TRAVELTP_###` to enhance the functionality of your _Travel_ app.
+> The definition, implementation and exposuse of instance actions is covered and explained in [RAP100](https://github.com/SAP-samples/abap-platform-rap100#exercises). Therefore, simply copy the business logic provided as code snippet below in your _travel_ behavior pool ![ABAP class](../images/adt_class.png)`ZRAP110_BP_TRAVELTP_###` to enhance the functionality of your _Travel_ app.
 > 
 > These instance actions will be needed in [Exercise 11: Enhance the BO Behavior with Business Events](../ex11/README.md).
 
@@ -276,12 +276,12 @@ In this exercise, you will implement the different actions defined for the _Trav
 > 
 > Then you will specify the action as **`default static factory action`** in the behavior definition![bdef](../images/adt_bdef.png) of the _travel_ entity . 
                
-> ℹ **Info:**  
+> ℹ **Info about Factory Action:**  
 > - With **factory actions**, you can create entity instances by executing an action.  
 > - **Static actions** are not bound to any instance but relate to the complete entity. So, instance factory actions can be useful if you want to copy specific values of an instance, whereas static factory actions can be used to create instances with prefilled default values. A factory action always has the result cardinality [1].  
 > - The **default** option specifies a static factory action as the new `create` operation that will be called by the SAP Fiori elements UI instead of the standard **`create`** operation.
 > 
-> The implementation of an **instance-bound factory action** is covered and explained in [RAP100](../../../rap100#exercises). 
+> The implementation of an **instance-bound factory action** is covered and explained in [RAP100](https://github.com/SAP-samples/abap-platform-rap100#exercises). 
 
 <details>
   <summary>🔵 Click to expand!</summary>
