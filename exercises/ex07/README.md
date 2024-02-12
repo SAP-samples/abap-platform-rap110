@@ -277,9 +277,9 @@ In this exercise, you will implement the different actions defined for the _Trav
 > Then you will specify the action as **`default static factory action`** in the behavior definition![bdef](../images/adt_bdef.png) of the _travel_ entity . 
                
 > ℹ **Info:**  
-> With **factory actions**, you can create entity instances by executing an action.  
-> **Static actions** are not bound to any instance but relate to the complete entity. So, instance factory actions can be useful if you want to copy specific values of an instance, whereas static factory actions can be used to create instances with prefilled default values. A factory action always has the result cardinality [1].  
-> With the option **default**, a static factory action is called automatically by the SAP Fiori elements UI instead of the standard **`create`** operation.
+> - With **factory actions**, you can create entity instances by executing an action.  
+> - **Static actions** are not bound to any instance but relate to the complete entity. So, instance factory actions can be useful if you want to copy specific values of an instance, whereas static factory actions can be used to create instances with prefilled default values. A factory action always has the result cardinality [1].  
+> - The **default** option specifies a static factory action as the new `create` operation that will be called by the SAP Fiori elements UI instead of the standard **`create`** operation.
 > 
 > The implementation of an **instance-bound factory action** is covered and explained in [RAP100](../../../rap100#exercises). 
 
