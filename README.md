@@ -121,14 +121,17 @@ Follow these steps to enhance an existing OData UI service developed with RAP fo
    
 _BO: Business Object_  
 _EML: Entity Manipulation Language_    
-💡 Exercises with _Boosters_ offer an accelerated way of doing them. 
+_💡: Exercises with _boosters_ that provide an accelerated way to do them._ 
 
 #### Optional Exercises: 
-The main exercises (1-12) focus on the development capabilities available in the ABAP Development Tools for Eclipse (ADT). The _SAP Fiori elements App Preview_ integrated in ADT is used to preview the resulting app. To create, deploy, and run the actual SAP Fiori elements-based _Travel_ app using the SAP Business Application Studio, follow the instructions in the following tutorial from the _SAP Developer Center_:
+The main exercises (1-12) focus on the development capabilities available in the ABAP Development Tools for Eclipse (ADT). The _SAP Fiori elements App Preview_ integrated in ADT is used to preview the resulting app. To create, deploy, and run the actual SAP Fiori elements-based _Travel_ app using the SAP Business Application Studio, follow the instructions in the following tutorials from the _SAP Developer Center_:
 
-[🛠 Create an SAP Fiori elements App and Deploy it to SAP BTP, ABAP Environment with SAP Business Application Studio | SAP Tutorials](https://developers.sap.com/tutorials/abap-environment-deploy-fiori-elements-ui.html)
+> **Info**: _Exercise 13 can be done after any of the main exercises (1-12), but preferably after at least Exercise 5_.
 
-> **Info**: This exercise can be performed after any of the main exercises above, but should be performed preferably after at least _Exercise 5_ .
+| Exercises | -- |
+| ------------- |  -- |
+| [Exercise 13: Create an SAP Fiori elements App and Deploy it to SAP BTP ABAP Environment with SAP Business Application Studio](https://developers.sap.com/tutorials/abap-environment-deploy-fiori-elements-ui.html) | -- |
+| [Exercise 14: Integrate an SAP Fiori App into the ABAP Fiori Launchpad](https://developers.sap.com/tutorials/abap-environment-integrate-app-into-flp.html) (_license required_)| -- |
 
 ## 📹Recording 
 [^Top of page](#)
