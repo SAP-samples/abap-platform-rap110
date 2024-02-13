@@ -24,7 +24,7 @@ This repository contains the material for the hands-on session **RAP110 - Buildi
 
 > You need the latest version of the ABAP Development Tools for Eclipse (ADT) on your laptop or PC as well as the access to an appropriate ABAP system* to carry out the practical exercises of this workshop.
 >
-> (*) The supported ABAP systems are SAP BTP ABAP Environment, SAP S/4HANA Cloud, Public Edition or release 2023 (or higher) of SAP S/4HANA and SAP S/4HANA Cloud, Private Edition.
+> (*) The supported ABAP systems are SAP BTP ABAP Environment, SAP S/4HANA Cloud Public Edition, or at least the release 2023 of SAP S/4HANA Cloud Private Edition and SAP S/4HANA.
 > The [ABAP Flight Reference Scenario](https://github.com/SAP-samples/abap-platform-refscen-flight) and the [openSource RAP Generator](https://github.com/SAP-samples/cloud-abap-rap) must imported into the relevant system - e.g. SAP BTP ABAP Environment Trial.
 
 <details>
@@ -142,11 +142,17 @@ For a compact overview of the exercises, watch the session replay from SAP TechE
 
 ## 📤Solution Package
 
-You can import the solution package **`ZRAP110_SOL`** into your system.
+> You can import the solution package **`ZRAP110_SOL`** into your system*. 
+>
+> (*) The supported ABAP systems are SAP BTP ABAP Environment, SAP S/4HANA Cloud Public Edition, or at least the release 2023 of SAP S/4HANA Cloud Private Edition and SAP S/4HANA.
+> The [ABAP Flight Reference Scenario](https://github.com/SAP-samples/abap-platform-refscen-flight) must available in the system before importing the solution package.
+
+Follow this instructions:
 
 1. If not yet done, [install the abapGit plug-in into your ABAP Development Tools (ADT) for Eclipse](https://developers.sap.com/tutorials/abap-install-abapgit-plugin.html)
-2. Use the abapGit Plug-in in ADT to import / pull the implementation into your system
-    📤 Git repository: https://github.tools.sap/D040081/rap110_sol
+2. Create the development package **`ZRAP110_SOL`** in your system.
+3. Use the abapGit Plug-in in ADT to import (i.e. pull) the implementation into your system.
+    📤 Git repository URL: https://github.com/SAP-samples/abap-platform-rap110
 
 ## Known Issues
 No known issues.
