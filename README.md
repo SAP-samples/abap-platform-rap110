@@ -147,12 +147,15 @@ For a compact overview of the exercises, watch the session replay from SAP TechE
 > (*) The supported ABAP systems are SAP BTP ABAP Environment, SAP S/4HANA Cloud Public Edition, or at least the release 2023 of SAP S/4HANA Cloud Private Edition and SAP S/4HANA.
 > The [ABAP Flight Reference Scenario](https://github.com/SAP-samples/abap-platform-refscen-flight) must available in the system before importing the solution package.
 
-Follow this instructions:
+Follow this instructions to import the solution:
 
-1. If not yet done, [install the abapGit plug-in into your ABAP Development Tools (ADT) for Eclipse](https://developers.sap.com/tutorials/abap-install-abapgit-plugin.html)
-2. Create the development package **`ZRAP110_SOL`** in your system.
-3. Use the abapGit Plug-in in ADT to import (i.e. pull) the implementation into your system.    
+1. [Install the abapGit plugin in your ABAP Development Tools (ADT) for Eclipse](https://developers.sap.com/tutorials/abap-install-abapgit-plugin.html) if you have not already done so.
+2. In ADT, create the ABAP package **`ZRAP110_SOL`** in your system.
+3. Open the **abapGit Repositories** view in ADT and follow the steps below.  
+4. Create a link to the repository using the **Link abapGit Repository** window.    
     📤 Git repository URL: https://github.com/SAP-samples/abap-platform-rap110
+5. Now pull/import the solution implementation using the context menu _**Pull...**_.
+6. Activate the imported development objects (**Ctrl+Shift+F3**).
 
 ## Known Issues
 No known issues.
