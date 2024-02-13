@@ -151,7 +151,7 @@ Follow this instructions:
 
 1. If not yet done, [install the abapGit plug-in into your ABAP Development Tools (ADT) for Eclipse](https://developers.sap.com/tutorials/abap-install-abapgit-plugin.html)
 2. Create the development package **`ZRAP110_SOL`** in your system.
-3. Use the abapGit Plug-in in ADT to import (i.e. pull) the implementation into your system.
+3. Use the abapGit Plug-in in ADT to import (i.e. pull) the implementation into your system.    
     📤 Git repository URL: https://github.com/SAP-samples/abap-platform-rap110
 
 ## Known Issues
