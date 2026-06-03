@@ -1,24 +1,24 @@
 [Home - RAP110](../../README.md)
 
-# Exercise 2: Enhance the Data Model of the Base and Projected Business Object (BO) 
+# Exercise 2: Enhance the Data Model of the Base and Projected Business Object (BO)
 
 ## Introduction
-In the previous exercise, you've had a look at your exercise package **`ZRAP110_###`**, where **`###`** is your assigned suffix (see [Exercise 1](../ex01/README.md)). 
+
+In the previous exercise, you've had a look at your exercise package **`ZRAP110_###`**, where **`###`** is your assigned suffix (see [Exercise 1](../ex01/README.md)).
 
 In this exercise, you will enhance the CDS data model of the base BO and the BO projection. These enhancements include enabling OData Stream in the base BO data model and adding new elements by associations, virtual elements, and adjusting the value help definitions in the BO data model projection.
 
-
 ### Exercises:
+
 - [2.1 - Enhance the Data Model of the Base _Travel_ BO Entity](#exercise-21-enhance-the-data-model-of-the-base-travel-bo)
 - [2.2 - Enhance the Data Model of the Projected _Travel_ BO Entity](#exercise-22-enhance-the-data-model-of-the-projected-travel-bo-entity)
 - [2.3 - Enhance the Data Model of the Projected _Booking_ BO Entity](#exercise-23-enhance-the-data-model-of-the-projected-booking-bo-entity)
 - [2.4 - Preview and Test the Enhanced Travel App](#exercise-24-preview-and-test-the-enhanced-travel-app)
 - [Summary](#summary)
 
-> **Reminder**: Do not forget to replace the suffix placeholder **`###`** with your assigned suffix in the exercise steps below. 
+> **Reminder**: Do not forget to replace the suffix placeholder **`###`** with your assigned suffix in the exercise steps below.
 
-> ℹ **Further reading**: [CDS Annotations](https://help.sap.com/docs/btp/sap-abap-restful-application-programming-model/cds-annotations) | [Working with Large Objects](https://help.sap.com/docs/btp/sap-abap-restful-application-programming-model/working-with-large-objects) | [Using Virtual Elements in CDS Projection Views](https://help.sap.com/docs/btp/sap-abap-restful-application-programming-model/using-virtual-elements-in-cds-projection-views) 
-
+> ℹ **Further reading**: [CDS Annotations](https://help.sap.com/docs/btp/sap-abap-restful-application-programming-model/cds-annotations) | [Working with Large Objects](https://help.sap.com/docs/btp/sap-abap-restful-application-programming-model/working-with-large-objects) | [Using Virtual Elements in CDS Projection Views](https://help.sap.com/docs/btp/sap-abap-restful-application-programming-model/using-virtual-elements-in-cds-projection-views)
 
 ### About Virtual Elements
 
@@ -34,8 +34,7 @@ In this exercise, you will enhance the CDS data model of the base BO and the BO 
 
 </details>
 
-
-## Exercise 2.1: Enhance the Data Model of the Base _Travel_ BO 
+## Exercise 2.1: Enhance the Data Model of the Base _Travel_ BO
 
 > Enhance the CDS data model of the base _travel_ BO entity to support to enable the handling of large objects (aka OData stream).
 
@@ -45,9 +44,9 @@ In this exercise, you will enhance the CDS data model of the base BO and the BO 
 ### Exercise 2.1.1: Enhance the Data Model of the Base _Travel_ BO Entity
 [^Top of page](#)
 
-> Adjust the CDS data model of the base _Travel_ BO entity in view entity ![datadefinition](../images/adt_ddls.png)**`ZRAP110_R_TravelTP_###`** to enable the handling of large objects in your Fiori elements app. 
-> 
-> By doing that, you will give end-users the option to upload and download images from your _Travel_ app. 
+> Adjust the CDS data model of the base _Travel_ BO entity in view entity ![datadefinition](../images/adt_ddls.png)**`ZRAP110_R_TravelTP_###`** to enable the handling of large objects in your Fiori elements app.
+>
+> By doing that, you will give end-users the option to upload and download images from your _Travel_ app.
 
 <details>
   <summary>🟣 Click to expand!</summary>
@@ -74,32 +73,33 @@ In this exercise, you will enhance the CDS data model of the base BO and the BO 
     <details>
       <summary>About the annotation `@Semantics.largeObject`</summary>
 
-      Here is a short explanation of the attributes of the element annotation **`@Semantics.largeObject`** : 
+      Here is a short explanation of the attributes of the element annotation **`@Semantics.largeObject`** :
 
        - **`mimeType`**: It is a mandatory attribute which indicates the name of the field containing the type of a MIME object. The value is-case sentitive.
        - **`fileName`**: It is an optional attribute which indicates the name of the field containing the file name of a MIME object. The value is-case sentitive.
        - **`acceptableMimeTypes`**: It provides the list of acceptable MIME types for the related stream property to restrict or verify the user entry accordingly. If any subtype is accepted, this can be indicated by *.
-       - **`contentDispositionPreference`**: It is used to define whether, depending on the browser settings, the file attachment is either displayed in the browser (setting #INLINE) or downloaded when selected (option #ATTACHMENT).  
+       - **`contentDispositionPreference`**: It is used to define whether, depending on the browser settings, the file attachment is either displayed in the browser (setting #INLINE) or downloaded when selected (option #ATTACHMENT).
 
       [Read more on Semantic Annotations](https://help.sap.com/docs/btp/sap-abap-restful-application-programming-model/semantics-annotations)
 
-     </details>     
-      
- 3. Save ![save icon](../images/adt_save.png) (**Ctrl+S**) and activate ![activate icon](../images/adt_activate.png) (**Ctrl+F3**) the changes. Close the data definition.
-  
- 4. You can check the result of this changes in the _Travel_ app preview by refreshing the it in the browser (_F5_) or starting the again the Fiori elements App Preview in ADT.
-  
-      You will now have the possibility to upload a file on the _travel_ details page, aka _Object Page_.
-  
-      <img src="images/ex201a.png" alt="Base Travel BO view" width="50%">   
+     </details>
+
+3.  Save ![save icon](../images/adt_save.png) (**Ctrl+S**) and activate ![activate icon](../images/adt_activate.png) (**Ctrl+F3**) the changes. Close the data definition.
+
+4.  You can check the result of this changes in the _Travel_ app preview by refreshing the it in the browser (_F5_) or starting the again the Fiori elements App Preview in ADT.
+
+    You will now have the possibility to upload a file on the _travel_ details page, aka _Object Page_.
+
+      <img src="images/ex201a.png" alt="Base Travel BO view" width="50%">
 
 </details>
 
 </details>
 
 ## Exercise 2.2: Enhance the Data Model of the Projected _Travel_ BO Entity
+
 [^Top of page](#)
- 
+
 > Enhance the CDS data model of the projected _travel_ BO entity with new elements from associations and defining virtual elements, adjusting the defined value help definitions to enable front-end validations, and removing use case irrelevant elements.
 
  <details>
@@ -112,75 +112,75 @@ In this exercise, you will enhance the CDS data model of the base BO and the BO 
  <details>
   <summary>🟣 Click to expand!</summary>
 
- 1. Performing classic adjustment tasks such as adding new elements from associations, specifying associated text elements, removing use case irrelevant elements have already been introduced and explained in [RAP100](https://github.com/SAP-samples/abap-platform-rap-workshops/tree/main/rap1xx/rap100#exercises). 
-   
+1.  Performing classic adjustment tasks such as adding new elements from associations, specifying associated text elements, removing use case irrelevant elements have already been introduced and explained in [RAP100](https://github.com/SAP-samples/abap-platform-rap-workshops/tree/main/rap1xx/rap100#exercises).
+
     Replace the whole data definition of the _travel_ BO projection view ![datadefinition](../images/adt_ddls.png)**`ZRAP110_C_TravelTP_###`** with the source code from the document provided below.
-  
+
     Replace all occurences of the placeholder **`###`** with your assigned suffix using **Ctrl+F**.
-    
+
     > **Hint**: The changed lines are marked with a comment in the provided source code.
-  
-    ▶📄 **Source code document:** ![ddls icon](../images/adt_ddls.png)[CDS Projection View ZRAP110_C_TRAVELTP_###](sources/EX02_DDLS_ZRAP110_C_TRAVELTP.txt)       
-  
- 2. Now, go ahead and define the virtual element **`OverallStatusIndicator`** that will be used to specify the criticality of the travel overall status in the _Travel_ app in the metadata extension later on. The end-user label of this element is **`Overall Status Indicator`**. 
- 
-    The keyword **`virtual`** must be specified in front of the element and the name of the calculation class must be specified in the annotation **`@ObjectModel.virtualElementCalculatedBy`**. The ABAP class ![class icon](../images/adt_class.png)**`ZRAP110_CALC_TRAV_ELEM_###`** will be used to calculate this virtual element is specified.   
-   
+
+    ▶📄 **Source code document:** ![ddls icon](../images/adt_ddls.png)[CDS Projection View ZRAP110*C_TRAVELTP*###](sources/EX02_DDLS_ZRAP110_C_TRAVELTP.txt)
+
+2.  Now, go ahead and define the virtual element **`OverallStatusIndicator`** that will be used to specify the criticality of the travel overall status in the _Travel_ app in the metadata extension later on. The end-user label of this element is **`Overall Status Indicator`**.
+
+    The keyword **`virtual`** must be specified in front of the element and the name of the calculation class must be specified in the annotation **`@ObjectModel.virtualElementCalculatedBy`**. The ABAP class ![class icon](../images/adt_class.png)**`ZRAP110_CALC_TRAV_ELEM_###`** will be used to calculate this virtual element is specified.
+
     Uncomment in the _Travel_ BO projection view ![datadefinition](../images/adt_ddls.png)**`ZRAP110_C_TravelTP_###`** the code snippet below placed after the element **`OverallStatusText`** in the SELECT list as shown on the screenshot and replace the placeholder **`###`** with your assigned suffix.
-  
+
     ```ABAP
               @ObjectModel.virtualElementCalculatedBy: 'ABAP:ZRAP110_CALC_TRAV_ELEM_###'
               @EndUserText.label: 'Overall Status Indicator'
       virtual OverallStatusIndicator : abap.int2,
-    ```                      
-  
+    ```
+
     <img src="images/ex2x1.png" alt="ABAP Class" width="50%">
-   
-    >  ℹ **Info:** Due to time constraint, a skelleton of the class **`ABAP:ZRAP110_CALC_TRAV_ELEM_###`* has been already generated in your exercise package. You will enhance its implementation in the step 2.4.   
-  
- 3. Save ![save icon](../images/adt_save.png) (**Ctrl+S**) and activate ![activate icon](../images/adt_activate.png) (**Ctrl+F3**) the changes. Close the data definition.  
+
+    > ℹ **Info:** Due to time constraint, a skeleton of the class \*_`ABAP:ZRAP110_CALC_TRAV_ELEM_###`\_ has been already generated in your exercise package. You will enhance its implementation in the step 2.4.
+
+3.  Save ![save icon](../images/adt_save.png) (**Ctrl+S**) and activate ![activate icon](../images/adt_activate.png) (**Ctrl+F3**) the changes. Close the data definition.
 
 </details>
 
 ### Exercise 2.2.2: Calculate the Virtual Elements of the _Travel_ BO Entity
 
-> Implement the logic of the virtual element **`OverallStatusIndicator`** in the ABAP Class ![class icon](../images/adt_class.png)**`ZRAP110_CALC_TRAV_ELEM_###`**, where `###`is your assigned suffix.
+> Implement the logic of the virtual element **`OverallStatusIndicator`** in the ABAP Class ![class icon](../images/adt_class.png)**`ZRAP110_CALC_TRAV_ELEM_###`**, where `###` is your assigned suffix.
 
  <details>
   <summary>🟣 Click to expand!</summary>
 
 <!-- 1. Open your ABAP class ![class icon](../images/adt_class.png)**`ZRAP110_CALC_TRAV_ELEM_###`** and have a look at the available source code.
-    
+
     > ⚠ **Error**: Please remove the statement **`interfaces IF_SADL_EXIT .`**  erroneously inserted by the generator into the class definition section. This is due to a bug that is currently under investigation.
-    > 
-    >   <img src="images/interfacex.png" alt="ABAP Class" width="50%">          
+    >
+    >   <img src="images/interfacex.png" alt="ABAP Class" width="50%">
 
     Your source code will look like this:
-   
+
     <img src="images/ex203.png" alt="ABAP Class" width="50%"> -->
 
- 1. Open your ABAP class ![class icon](../images/adt_class.png)**`ZRAP110_CALC_TRAV_ELEM_###`** and replace the entire code with the code provided below. Replace all occurences of the placeholder **`###`** with your assigned suffix using **Ctrl+F**.
+1.  Open your ABAP class ![class icon](../images/adt_class.png)**`ZRAP110_CALC_TRAV_ELEM_###`** and replace the entire code with the code provided below. Replace all occurences of the placeholder **`###`** with your assigned suffix using **Ctrl+F**.
 
     ```ABAP
     CLASS zrap110_calc_trav_elem_### DEFINITION
       PUBLIC
       FINAL
       CREATE PUBLIC .
-    
+
       PUBLIC SECTION.
         INTERFACES if_sadl_exit_calc_element_read .
-    
+
       PROTECTED SECTION.
       PRIVATE SECTION.
     ENDCLASS.
-    
+
     CLASS ZRAP110_CALC_TRAV_ELEM_### IMPLEMENTATION.
-    
+
       METHOD IF_SADL_EXIT_CALC_ELEMENT_READ~CALCULATE.
         IF it_requested_calc_elements IS INITIAL.
           EXIT.
         ENDIF.
-    
+
         LOOP AT it_requested_calc_elements ASSIGNING FIELD-SYMBOL(<fs_req_calc_elements>).
           CASE <fs_req_calc_elements>.
               "virtual elements from TRAVEL entity
@@ -188,103 +188,103 @@ In this exercise, you will enhance the CDS data model of the base BO and the BO 
               DATA lt_trav_original_data TYPE STANDARD TABLE OF ZRAP110_C_TravelTP_### WITH DEFAULT KEY.
               lt_trav_original_data = CORRESPONDING #( it_original_data ).
               LOOP AT lt_trav_original_data ASSIGNING FIELD-SYMBOL(<fs_trav_original_data>).
-    
+
     *            <fs_trav_original_data> = zrap110_calc_trav_elem_###=>calculate_trav_status_ind( <fs_trav_original_data> ).
-    
-              ENDLOOP.    
-              ct_calculated_data = CORRESPONDING #( lt_trav_original_data ).  
+
+              ENDLOOP.
+              ct_calculated_data = CORRESPONDING #( lt_trav_original_data ).
           ENDCASE.
         ENDLOOP.
       ENDMETHOD.
-    
+
       METHOD IF_SADL_EXIT_CALC_ELEMENT_READ~GET_CALCULATION_INFO.
         IF iv_entity EQ 'ZRAP110_C_TRAVELTP_###'. "Travel BO node
           LOOP AT it_requested_calc_elements ASSIGNING FIELD-SYMBOL(<fs_travel_calc_element>).
             CASE <fs_travel_calc_element>.
               WHEN 'OVERALLSTATUSINDICATOR'.
                 APPEND 'OVERALLSTATUS' TO et_requested_orig_elements.
-    
+
             ENDCASE.
           ENDLOOP.
         ENDIF.
       ENDMETHOD.
-    
+
     ENDCLASS.
-    ```      
-  
-    **Brief explanation**: 
+    ```
+
+    **Brief explanation**:
     <details>
       <summary> Click to expand!</summary>
-   
-      - The class implements the virtual element interface **`IF_SADL_EXIT_CALC_ELEMENT_READ`** that must be implemented by calculation classes for virtual elements.
-  
-      - The method **`IF_SADL_EXIT_CALC_ELEMENT_READ~GET_CALCULATION_INFO`** provides a list of all elements that are required for calculating the values of the virtual elements in the requested entity. This method is called during runtime before the retrieval of data from the database to ensure that all necessary elements for calculation are filled with data.
-  
-      - The method **`IF_SADL_EXIT_CALC_ELEMENT_READ~CALCULATE`** executes the value calculation for the virtual element. This method is called during runtime after data is retrieved from the database. The elements needed for the calculation of the virtual elements are already inside the data table passed to this method. The method returns a table that contains the values of the requested virtual elements.
-    
-      > **Read more**: [Using Virtual Elements in CDS Projection](https://help.sap.com/docs/btp/fc4c71aa50014fd1b43721701471913d/319380e0cef94051ae9aa292ffadb59a.html)
 
-    </details>      
-      
- 2. Define the class method interface **`calculate_trav_status_ind`** in the public section of the class definition where the proper calculation of the virtual element **`OverallStatusIndicator`** will take place. The method is declared as class method to have the possibility to access it externaly, for example, from a function.
-  
-    For that, insert the code snippet provided below after the statement _`interfaces IF_SADL_EXIT_CALC_ELEMENT_READ.`_ in the class definition and replace all occurences of the placeholder **`###`** with your assigned suffix.   
-  
+    - The class implements the virtual element interface **`IF_SADL_EXIT_CALC_ELEMENT_READ`** that must be implemented by calculation classes for virtual elements.
+
+    - The method **`IF_SADL_EXIT_CALC_ELEMENT_READ~GET_CALCULATION_INFO`** provides a list of all elements that are required for calculating the values of the virtual elements in the requested entity. This method is called during runtime before the retrieval of data from the database to ensure that all necessary elements for calculation are filled with data.
+
+    - The method **`IF_SADL_EXIT_CALC_ELEMENT_READ~CALCULATE`** executes the value calculation for the virtual element. This method is called during runtime after data is retrieved from the database. The elements needed for the calculation of the virtual elements are already inside the data table passed to this method. The method returns a table that contains the values of the requested virtual elements.
+
+    > **Read more**: [Using Virtual Elements in CDS Projection](https://help.sap.com/docs/btp/fc4c71aa50014fd1b43721701471913d/319380e0cef94051ae9aa292ffadb59a.html)
+
+    </details>
+
+2.  Define the class method interface **`calculate_trav_status_ind`** in the public section of the class definition where the proper calculation of the virtual element **`OverallStatusIndicator`** will take place. The method is declared as class method to have the possibility to access it externaly, for example, from a function.
+
+    For that, insert the code snippet provided below after the statement _`interfaces IF_SADL_EXIT_CALC_ELEMENT_READ.`_ in the class definition and replace all occurences of the placeholder **`###`** with your assigned suffix.
+
     ```ABAP
     CLASS-METHODS:
       calculate_trav_status_ind
         IMPORTING is_original_data TYPE ZRAP110_C_TravelTP_###
         RETURNING VALUE(result)    TYPE ZRAP110_C_TravelTP_###.
-    ```      
-  
-     Your source code should look like this:
-     
-     <img src="images/ex2x2.png" alt="ABAP Class" width="50%">
- 
-  
- 3. Press the light bulb symbol on the left side or use the ADT Quick Fix (**Ctrl+1**) to add the missing method implementations. Set the cursor before your method **`calculate_trav_status_ind`** and press **CTRL + 1**, select **Add implementation for `calculate_trav_status_ind`**.
+    ```
 
     Your source code should look like this:
-     
+
+     <img src="images/ex2x2.png" alt="ABAP Class" width="50%">
+
+3.  Press the light bulb symbol on the left side or use the ADT Quick Fix (**Ctrl+1**) to add the missing method implementations. Set the cursor before your method **`calculate_trav_status_ind`** and press **CTRL + 1**, select **Add implementation for `calculate_trav_status_ind`**.
+
+    Your source code should look like this:
+
     <img src="images/ex2x11.png" alt="ABAP Class" width="50%">
-  
- 4. Implement the methods **`calculate_trav_status_ind`**.
-     
-    The logic is quite simple: the criticality indicator ( 1  = red | 2 = orange  | 3 = green) is bound to the overall travel status:
-     - If travel status is _accepted_, then the criticality is `3`, i.e. green.
-     - If travel status is _open_, then the criticality is `2`, i.e. orange.
-     - If travel status is _rejected_, then the criticality is `1`, i.e. red.
-   
+
+4.  Implement the methods **`calculate_trav_status_ind`**.
+
+    The logic is quite simple: the criticality indicator ( 1 = red | 2 = orange | 3 = green) is bound to the overall travel status:
+
+    - If travel status is _accepted_, then the criticality is `3`, i.e. green.
+    - If travel status is _open_, then the criticality is `2`, i.e. orange.
+    - If travel status is _rejected_, then the criticality is `1`, i.e. red.
+
     For that, replace the empty method implementation of **`calculate_trav_status_ind`** with the code snippet provided below.
-  
+
     ```ABAP
-      METHOD calculate_trav_status_ind.   
+      METHOD calculate_trav_status_ind.
         result = CORRESPONDING #( is_original_data ).
 
         "travel status indicator
-        "(criticality: 1  = red | 2 = orange  | 3 = green)  
+        "(criticality: 1  = red | 2 = orange  | 3 = green)
         CASE result-OverallStatus.
           WHEN 'X'.
             result-OverallStatusIndicator = 1.
           WHEN 'O'.
             result-OverallStatusIndicator = 2.
           WHEN 'A'.
-            result-OverallStatusIndicator = 3.        
+            result-OverallStatusIndicator = 3.
           WHEN OTHERS.
         ENDCASE.
-      ENDMETHOD.   
-    ```   
-   
+      ENDMETHOD.
+    ```
+
     <img src="images/ex206.png" alt="ABAP Class" width="50%">
-  
- 5. Now, uncomment the method call **`calculate_trav_status_ind`** within the method **`CALCULATE`**.
-   
+
+5.  Now, uncomment the method call **`calculate_trav_status_ind`** within the method **`CALCULATE`**.
+
     > `<fs_trav_original_data> = zrap110_calc_trav_elem_###=>calculate_trav_status_ind( <fs_trav_original_data> ).`
-  
-    <img src="images/ex207.png" alt="ABAP Class" width="80%">  
-  
- 6. Save ![save icon](../images/adt_save.png) (**Ctrl+S**) and activate ![activate icon](../images/adt_activate.png) (**Ctrl+F3**) the changes. Close the ABAP class.
-   
+
+    <img src="images/ex207.png" alt="ABAP Class" width="80%">
+
+6.  Save ![save icon](../images/adt_save.png) (**Ctrl+S**) and activate ![activate icon](../images/adt_activate.png) (**Ctrl+F3**) the changes. Close the ABAP class.
+
 </details>
 
 </details>  
@@ -297,17 +297,17 @@ In this exercise, you will enhance the CDS data model of the base BO and the BO 
  <details>
   <summary>🔵 Click to expand!</summary>
 
- ### Exercise 2.3.1: Enhance the _Booking_ BO projection view
+### Exercise 2.3.1: Enhance the _Booking_ BO projection view
 
-> Enhance the _Booking_ BO projection view ![ddls icon](../images/adt_ddls.png)**`ZRAP110_C_BookingTP_###`**.   
-> 
-> Beside basic minor classic adjustments, you will add four (4) virtual elements to the data model: 
->   
->   - **`BookingStatusIndicator`** that will be used to determine the criticality of the booking status on Fiori elements UIs in the metadata extension later on. End-user label is "_Overall Status Indicator_".   
->   - **`InitialDaysToFlight`** that will be used to calculate the initial number of days between the flight date and the booking date (_flight date - booking date_). the end-user label is "_Initial Days to Flight_".     
->   - **`RemainingDaysToFlight`** that will be used to calculate the remaining number of days before the flight (_flight date - current date_). End-user label is "_Remaining Days to Flight_".    
->   - **`DaysToFlightIndicator`** that will be used to calculate the criticality indicator for the remaining days to flight. The end-user label is "_Days to Flight Indicator_".         
- 
+> Enhance the _Booking_ BO projection view ![ddls icon](../images/adt_ddls.png)**`ZRAP110_C_BookingTP_###`**.
+>
+> Besides basic minor classic adjustments, you will add four (4) virtual elements to the data model:
+>
+> - **`BookingStatusIndicator`** that will be used to determine the criticality of the booking status on Fiori elements UIs in the metadata extension later on. End-user label is "_Overall Status Indicator_".
+> - **`InitialDaysToFlight`** that will be used to calculate the initial number of days between the flight date and the booking date (_flight date - booking date_). the end-user label is "_Initial Days to Flight_".
+> - **`RemainingDaysToFlight`** that will be used to calculate the remaining number of days before the flight (_flight date - current date_). End-user label is "_Remaining Days to Flight_".
+> - **`DaysToFlightIndicator`** that will be used to calculate the criticality indicator for the remaining days to flight. The end-user label is "_Days to Flight Indicator_".
+
  <details>
   <summary>🟣 Click to expand!</summary>
  
@@ -326,8 +326,8 @@ In this exercise, you will enhance the CDS data model of the base BO and the BO 
     <img src="images/ex2x3.png" alt="ABAP Class" width="70%">
 
     <details>
-      <summary>Source code</summary>   
-        
+      <summary>Source code</summary>
+
       ```ABAP
               @ObjectModel.virtualElementCalculatedBy: 'ABAP:ZRAP110_CALC_BOOK_ELEM_###'
               @EndUserText.label: 'Booking Status Indicator'
@@ -343,16 +343,17 @@ In this exercise, you will enhance the CDS data model of the base BO and the BO 
 
               @ObjectModel.virtualElementCalculatedBy: 'ABAP:ZRAP110_CALC_BOOK_ELEM_###'
               @EndUserText.label: 'Days to Flight Indicator'
-      virtual DaysToFlightIndicator  : abap.int1,      
-      ``` 
-      
+      virtual DaysToFlightIndicator  : abap.int1,
+      ```
+
     </details>
-     
- 5. Save ![save icon](../images/adt_save.png) (**Ctrl+S**) and activate ![activate icon](../images/adt_activate.png) (**Ctrl+F3**) the changes. Close the data definition.  
-  
+
+5.  Save ![save icon](../images/adt_save.png) (**Ctrl+S**) and activate ![activate icon](../images/adt_activate.png) (**Ctrl+F3**) the changes. Close the data definition.
+
 </details>
 
-### Exercise 2.3.2: Calculate the Virtual Elements of the _Booking_ BO Entity 
+### Exercise 2.3.2: Calculate the Virtual Elements of the _Booking_ BO Entity
+
 [^Top of page](#)
 
 > Implement the logic of the different virtual elements of the _booking_ BO entity in the ABAP Class ![class icon](../images/adt_class.png)**`ZRAP110_CALC_BOOK_ELEM_###`**, where `###`is your assigned suffix.
@@ -360,51 +361,51 @@ In this exercise, you will enhance the CDS data model of the base BO and the BO 
  <details>
   <summary>🟣 Click to expand!</summary>
 
-<!-- 1. Open your ABAP class ![ABAP class](../images/adt_class.png)**`ZRAP110_CALC_BOOK_ELEM_###`** and have a look at it. It is similar to the ABAP class `ZRAP110_CALC_TRAV_ELEM_###` and the princip is the same.
-      
+<!-- 1. Open your ABAP class ![ABAP class](../images/adt_class.png)**`ZRAP110_CALC_BOOK_ELEM_###`** and have a look at it. It is similar to the ABAP class `ZRAP110_CALC_TRAV_ELEM_###` and the principle is the same.
+
     > ⚠ **Error**: Please remove the statement **`interfaces IF_SADL_EXIT .`** erroneously inserted by the generator into the class definition section. This is due to a bug that is currently under investigation.
-    > 
-    > <img src="images/interfacex2.png" alt="ABAP Class" width="50%"> --> 
-        
- 1. Open your ABAP class ![ABAP class](../images/adt_class.png)**`ZRAP110_CALC_BOOK_ELEM_###`** and replace the entire code with the code provided below. Replace all occurences of the placeholder **`###`** with your assigned suffix using **Ctrl+F**.
+    >
+    > <img src="images/interfacex2.png" alt="ABAP Class" width="50%"> -->
+
+1.  Open your ABAP class ![ABAP class](../images/adt_class.png)**`ZRAP110_CALC_BOOK_ELEM_###`** and replace the entire code with the code provided below. Replace all occurences of the placeholder **`###`** with your assigned suffix using **Ctrl+F**.
 
     ```ABAP
     CLASS zrap110_calc_book_elem_### DEFINITION
       PUBLIC
       FINAL
       CREATE PUBLIC .
-    
+
       PUBLIC SECTION.
         INTERFACES if_sadl_exit_calc_element_read .
-    
+
       PROTECTED SECTION.
       PRIVATE SECTION.
     ENDCLASS.
-    
+
     CLASS zrap110_calc_book_elem_### IMPLEMENTATION.
-    
+
       METHOD if_sadl_exit_calc_element_read~calculate.
         IF it_requested_calc_elements IS INITIAL.
           EXIT.
         ENDIF.
-        
-        LOOP AT it_requested_calc_elements ASSIGNING FIELD-SYMBOL(<fs_req_calc_elements>).    
+
+        LOOP AT it_requested_calc_elements ASSIGNING FIELD-SYMBOL(<fs_req_calc_elements>).
           CASE <fs_req_calc_elements>.
               "virtual elements from BOOKING entity
             WHEN 'INITIALDAYSTOFLIGHT'   OR 'REMAININGDAYSTOFLIGHT'
-              OR 'DAYSTOFLIGHTINDICATOR' OR 'BOOKINGSTATUSINDICATOR'.    
+              OR 'DAYSTOFLIGHTINDICATOR' OR 'BOOKINGSTATUSINDICATOR'.
               DATA lt_book_original_data TYPE STANDARD TABLE OF ZRAP110_C_BookingTP_### WITH DEFAULT KEY.
               lt_book_original_data = CORRESPONDING #( it_original_data ).
               LOOP AT lt_book_original_data ASSIGNING FIELD-SYMBOL(<fs_book_original_data>).
-    
+
     *            <fs_book_original_data> = zrap110_calc_book_elem_###=>calculate_days_to_flight( <fs_book_original_data> ).
-    
+
               ENDLOOP.
               ct_calculated_data = CORRESPONDING #( lt_book_original_data ).
           ENDCASE.
         ENDLOOP.
       ENDMETHOD.
-        
+
       METHOD if_sadl_exit_calc_element_read~get_calculation_info.
         IF iv_entity EQ 'ZRAP110_C_BOOKINGTP_###'. "Booking BO node
           LOOP AT it_requested_calc_elements ASSIGNING FIELD-SYMBOL(<fs_booking_calc_element>).
@@ -420,13 +421,13 @@ In this exercise, you will enhance the CDS data model of the base BO and the BO 
                 COLLECT `BOOKINGSTATUS` INTO et_requested_orig_elements.
             ENDCASE.
           ENDLOOP.
-        ENDIF.    
+        ENDIF.
       ENDMETHOD.
-    
+
     ENDCLASS.
-    ```      
-      
- 2. Define the class method interface **`calculate_days_to_flight`** in the public section of the class definition. 
+    ```
+
+2.  Define the class method interface **`calculate_days_to_flight`** in the public section of the class definition.
 
     For that, insert the code snippet provided below after the statement _`interfaces IF_SADL_EXIT_CALC_ELEMENT_READ.`_ in the class definition and replace all occurences of the placeholder **`###`** with your assigned suffix.
 
@@ -435,24 +436,24 @@ In this exercise, you will enhance the CDS data model of the base BO and the BO 
         calculate_days_to_flight
           IMPORTING is_original_data TYPE ZRAP110_C_BookingTP_###
           RETURNING VALUE(result)    TYPE ZRAP110_C_BookingTP_###.
-    ```      
-  
-     Your source code should look like this:
-     
-     <img src="images/ex2x13.png" alt="ABAP Class" width="50%">
-  
- 3. Save ![save icon](../images/adt_save.png) (**Ctrl+S**) the changes. 
-  
- 4. Press the light bulb symbol on the left side or use the ADT Quick Fix (**Ctrl+1**) to add the missing method implementations. Set the cursor before your method **`calculate_days_to_flight`** and press **CTRL + 1**, select **Add implementation for `calculate_days_to_flight`**.
+    ```
 
     Your source code should look like this:
-     
-    <img src="images/ex2x14.png" alt="ABAP Class" width="50%">  
-  
- 5. Implement the method **`calculate_days_to_flight`** which calculates the value of the virtual element defined in the _booking_ BO entity.
 
-    For that, replace the empty method implementation of **`calculate_days_to_flight`** with the code snippet provided below.   
-  
+     <img src="images/ex2x13.png" alt="ABAP Class" width="50%">
+
+3.  Save ![save icon](../images/adt_save.png) (**Ctrl+S**) the changes.
+
+4.  Press the light bulb symbol on the left side or use the ADT Quick Fix (**Ctrl+1**) to add the missing method implementations. Set the cursor before your method **`calculate_days_to_flight`** and press **CTRL + 1**, select **Add implementation for `calculate_days_to_flight`**.
+
+    Your source code should look like this:
+
+    <img src="images/ex2x14.png" alt="ABAP Class" width="50%">
+
+5.  Implement the method **`calculate_days_to_flight`** which calculates the value of the virtual element defined in the _booking_ BO entity.
+
+    For that, replace the empty method implementation of **`calculate_days_to_flight`** with the code snippet provided below.
+
     ```ABAP
       METHOD calculate_days_to_flight.
         DATA(today) = cl_abap_context_info=>get_system_date( ).
@@ -500,8 +501,8 @@ In this exercise, you will enhance the CDS data model of the base BO and the BO 
           WHEN OTHERS.
         ENDCASE.
       ENDMETHOD.
-    ```  
-    
+    ```
+
     <details>
       <summary>About the virtual elements</summary>
       
@@ -510,16 +511,16 @@ In this exercise, you will enhance the CDS data model of the base BO and the BO 
        - **`RemainingDaysToFlight`**: The number of days until departure from today.   
        - **`DaysToFlightIndicator`**: The criticality/coloring for the remaining days to flight    
        - Colors: 1 = red | 2 = orange | 3 = green | 4 = grey | 5 = bleu
-    </details>      
-   
- 7. Now, uncomment the method call **`calculate_trav_status_ind`** within the method **`CALCULATE`**.
-   
+    </details>
+
+6.  Now, uncomment the method call **`calculate_trav_status_ind`** within the method **`CALCULATE`**.
+
     > `<fs_book_original_data> = zrap110_calc_book_elem_###=>calculate_days_to_flight( <fs_book_original_data> ).`
-  
-    <img src="images/ex2x15.png" alt="ABAP Class" width="80%">  
-   
- 8. Save ![save icon](../images/adt_save.png) (**Ctrl+S**) and activate ![activate icon](../images/adt_activate.png) (**Ctrl+F3**) the changes. Close the ABAP class. 
-   
+
+    <img src="images/ex2x15.png" alt="ABAP Class" width="80%">
+
+7.  Save ![save icon](../images/adt_save.png) (**Ctrl+S**) and activate ![activate icon](../images/adt_activate.png) (**Ctrl+F3**) the changes. Close the ABAP class.
+
 </details>
 
 </details>
@@ -527,12 +528,12 @@ In this exercise, you will enhance the CDS data model of the base BO and the BO 
 ## Exercise 2.4: Preview and Test the enhanced Travel App
 [^Top of page](#)
 
-> Test the enhanced SAP Fiori elements application.   
+> Test the enhanced SAP Fiori elements application.
 
  <details>
   <summary>🔵 Click to expand!</summary>
    
- 1. Refresh your browser or start the  SAP Fiori elements app preview from your service binding ![../servicebinding](../images/adt_srvb.png) **`ZRAP110_UI_TRAVEL_O4_###`** by double-clickin the _**Travel**_ entity set.
+ 1. Refresh your browser or start the  SAP Fiori elements app preview from your service binding ![../servicebinding](../images/adt_srvb.png) **`ZRAP110_UI_TRAVEL_O4_###`** by double-clicking the _**Travel**_ entity set.
    
     If you haven't created any entries, please do one travel entry now.
  
@@ -550,30 +551,31 @@ In this exercise, you will enhance the CDS data model of the base BO and the BO 
    
  4. Now you can see the **Overall Status Indicator**.
    
-    <img src="images/ex2x6.png" alt="ABAP Class" width="80%">  
+    <img src="images/ex2x6.png" alt="ABAP Class" width="80%">
 
- 5. Select your entry.
-   
-    <img src="images/ex2x7.png" alt="ABAP Class" width="80%">   
-   
+5.  Select your entry.
+
+    <img src="images/ex2x7.png" alt="ABAP Class" width="80%">
+
     Now click **Edit**.
-   
-    <img src="images/ex2x8.png" alt="ABAP Class" width="80%">  
-   
-    Now you can see, that you are able to upload attachement on the _Travel_ object page. 
-   
-    <img src="images/ex2x9.png" alt="ABAP Class" width="80%">  
+
+    <img src="images/ex2x8.png" alt="ABAP Class" width="80%">
+
+    Now you can see, that you are able to upload attachement on the _Travel_ object page.
+
+    <img src="images/ex2x9.png" alt="ABAP Class" width="80%">
 
 </details>
 
+## Summary
 
-## Summary 
 [^Top of page](#)
 
-Now that you've... 
+Now that you've...
+
 - enabled the OData stream handling in the base BO to upload files
 - added elements to the selection list and element/view annotations in the consumption view,
-- added and implemented virtual elements on the consumption layer  
+- added and implemented virtual elements on the consumption layer
 - checked the preview,
 
 you can continue with the next exercise – **[Exercise 3: Enhance the BO Behavior Definition and Projection](../ex03/README.md)**
